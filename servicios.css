@@ -1,0 +1,37 @@
+
+
+/* Contenedor principal de la sección "Servicios / Nosotros" */
+.servicios {
+  background: linear-gradient(90deg, #27507c, #472828); /* degradado azul-rojo */
+  padding: 50px 20px;              
+  border-radius: 10px; 
+  width: 100%;            
+  max-width: none;               
+  margin: 20px auto;              
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+
+  display: flex;              
+  flex-wrap: wrap;            
+  justify-content: center;    
+  gap: 30px;                  
+}
+
+/* Cada bloque de servicio */
+.servicio {
+  background: rgba(255, 255, 255, 0.1); /* semitransparente para ver el fondo */
+  border-radius: 10px;        /* bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* sombra suave */
+  padding: 20px;              /* espaciado interno */
+  width: 300px;               /* ancho fijo */
+  text-align: center;         /* centrado del contenido */
+  color: #fff;                /* texto blanco para contraste */
+  transition: all 0.3s ease;  /* animación suave al hover */
+}
+
+/* Efecto hover en cada bloque */
+.servicio:hover {
+  background: rgba(255, 255, 255, 0.2); /* un poco más visible al pasar el mouse */
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
