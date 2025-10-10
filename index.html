@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"> <!-- Codificación de caracteres para español -->
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio</title>   <!-- Título de la pestaña del navegador -->
+  <title>El Araguaney M&D 2024 - Inicio</title>
+  <!-- Estilos globales -->
   <link rel="stylesheet" href="styles.css">
-   <!-- Enlace al archivo CSS externo -->
+  <!-- Iconos de redes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="index">
+
+  <!-- Header -->
   <header>
     <div class="logo-container">
       <img src="imagenes/logo.png" class="logo-icon" alt="Logo M&D">
@@ -15,84 +19,125 @@
         El Araguaney <span class="resaltado">M&amp;D</span> 2024 C.A.
       </a>
     </div>
-    
+    <div class="menu-hamburguesa" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav>
       <ul class="menu-header">
-        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html" class="active">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="servicios.html">Servicios</a></li>
         <li><a href="productos.html">Productos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="conocenos.html">Conocenos</a></li>
+        <li><a href="conocenos.html">Conócenos</a></li>
       </ul>
     </nav>
   </header>
-
-  <!-- Contenido principal de la página -->
-  <main>
-    
-
-   
-  
-
-  <!-- Imagen con texto superpuesto -->
-  <div class="imagen-con-texto">
-    <img src="imagenes/nosotros.png" alt="Bienvenido">
-    <p class="texto-principal">El Araguaney M&D 2024.</p>
-    <p class="texto-secundario">Soluciones creativas e innovadoras para ti.</p>
-  </div>
 </main>
 
-  <!-- Pie de página -->
- <footer class="footer">
-  <div class="footer-container">
-    <!-- Logo -->
-    <div class="footer-col">
-      <img src="imagenes/uptaeb.png" alt="uptaeb" class="logo">
-      <p>&copy; Universidad Politécnica Territorial Andrés Eloy Blanco</p>
-    </div>
+<script>
+function toggleMenu() {
+  var menu = document.querySelector('.menu-header');
+  menu.classList.toggle('show');
+}
+</script>
 
-    <!-- Desarrolladores -->
-    <div class="footer-col">
-      <h4>DESARROLLADORES</h4>
-      <ul class="devs-list">
-        <li class="dev">
-          <img src="imagenes/dev.jpeg" alt="Harrinson">
-          <span>HARRINSON ORTIZ</span>
-        </li>
-        <li class="dev">
-          <img src="imagenes/dev.jpeg" alt="Eiber">
-          <span>EIBER RODRÍGUEZ</span>
-        </li>
-        <li class="dev">
-          <img src="imagenes/dev.jpeg" alt="Yorbis">
-          <span>YORBYS BONILLA</span>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Enlaces -->
-    <div class="footer-col">
-      <h4>ENLACES</h4>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Productos</a></li>
-      </ul>
-    </div>
-
-    <!-- Redes Sociales -->
-    <div class="footer-col social">
-      <h4>SÍGUENOS</h4>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-    </div>
+  <!-- Contenido principal -->
+  <main>
+    <!-- Imagen de bienvenida -->
+   <div class="imagen-con-texto">
+  <img src="imagenes/nosotros.png" alt="Bienvenido">
+  <div class="texto-encima">
+    <p class="texto-principal">Bienvenido a El Araguaney M&D</p>
+    <p class="texto-secundario">Tu concesionario de confianza en motos, repuestos y servicios.</p>
   </div>
-</footer>
+</div>
+
+</section>
 
 
+<!-- Sección de presentación -->
+<section class="contenedor-nosotros">
+  <div class="bloque">
+    <h2>Pasión por las Motos</h2>
+    <p>
+      En <strong>El Araguaney M&D</strong> ofrecemos la mejor experiencia sobre dos ruedas, 
+      con calidad, seguridad y respaldo garantizado.
+    </p>
+  </div>
+  <div class="bloque">
+    <h2>Garantía de Confianza</h2>
+    <p>
+      Todas nuestras motos y repuestos cuentan con garantía respaldada, 
+      asegurando tu inversión y tranquilidad en cada kilómetro recorrido.
+    </p>
+  </div>
+
+  <!-- Bloque de comunidad -->
+  <div class="bloque">
+    <h2>Comunidad de Motociclistas</h2>
+    <p>
+      Más que un concesionario, somos un punto de encuentro.  
+      Únete a nuestras rutas, eventos y actividades especiales para amantes de las dos ruedas.
+    </p>
+  </div>
+</section>
+
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo -->
+      <div class="footer-col">
+        <img src="imagenes/uptaeb.png" alt="uptaeb" class="logo">
+        <p>&copy; Universidad Politécnica Territorial Andrés Eloy Blanco</p>
+      </div>
+
+      <!-- Desarrolladores -->
+      <div class="footer-col">
+        <h4>DESARROLLADORES</h4>
+        <ul class="devs-list">
+          <li class="dev">
+            <img src="imagenes/dev.jpeg" alt="Harrinson">
+            <span>Harrinson Ortiz</span>
+          </li>
+          <li class="dev">
+            <img src="imagenes/dev.jpeg" alt="Eiber">
+            <span>Eiber Rodriguez</span>
+          </li>
+          <li class="dev">
+            <img src="imagenes/dev.jpeg" alt="Yorbis">
+            <span>YorbysBonilla</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Enlaces -->
+      <div class="footer-col">
+        <h4>ENLACES</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="productos.html">Productos</a></li>
+        </ul>
+      </div>
+
+      <!-- Redes Sociales -->
+      <div class="footer-col social">
+        <h4>SÍGUENOS</h4>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
+

@@ -1,37 +1,179 @@
+/* Títulos principales de servicios con color y sombreado igual a catálogo de motos */
+h2 , h1 {
+  color: #ffcc00;
+  text-shadow: 2px 2px 8px #472828, 0 0 2px #000;
+}
 
-
-/* Contenedor principal de la sección "Servicios / Nosotros" */
 .servicios {
-  background: linear-gradient(90deg, #27507c, #472828); /* degradado azul-rojo */
-  padding: 50px 20px;              
-  border-radius: 10px; 
-  width: 100%;            
-  max-width: none;               
+  padding: 80px 20px 50px 20px; /* 80px arriba, 50px abajo */
+  background: linear-gradient(90deg, #27507c, #472828);
+  font-family: 'Segoe UI', sans-serif; 
+  color: #ffcc00;                     
+  border-radius: 10px;             
+  max-width: 1200px;               
   margin: 20px auto;              
   box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
-
-  display: flex;              
-  flex-wrap: wrap;            
-  justify-content: center;    
-  gap: 30px;                  
 }
 
-/* Cada bloque de servicio */
-.servicio {
-  background: rgba(255, 255, 255, 0.1); /* semitransparente para ver el fondo */
-  border-radius: 10px;        /* bordes redondeados */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* sombra suave */
-  padding: 20px;              /* espaciado interno */
-  width: 300px;               /* ancho fijo */
-  text-align: center;         /* centrado del contenido */
-  color: #fff;                /* texto blanco para contraste */
-  transition: all 0.3s ease;  /* animación suave al hover */
+
+/* Estilo del título principal */
+.servicios h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #ffcc00;
+  margin-bottom: 15px;
 }
 
-/* Efecto hover en cada bloque */
-.servicio:hover {
-  background: rgba(255, 255, 255, 0.2); /* un poco más visible al pasar el mouse */
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+
+/* Párrafos en la sección nosotros */
+.servicios p {
+  text-align: center;             
+  max-width: 800px;               
+  margin: 0 auto 40px;            
+  font-size: 18px;                
+  line-height: 1.6;               
+  color: #ffcc00;
 }
 
+/* Contenedor que agrupa los bloques de misión, visión y valores */
+.contenedor-servicios {
+  display: flex;                  
+  flex-wrap: wrap;               
+  justify-content: center;        
+  gap: 30px;                     
+}
+
+/* Estilo general para cada bloque de contenido */
+.bloque {
+  background: rgba(255,255,255,0.1); /* deja ver el degradado */
+  border-radius: 10px;            
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+  padding: 20px; 
+   max-width: 200px;                 
+    min-width: 280px;                 
+  color: #fff;                     
+}
+
+/* Títulos dentro de cada bloque */
+.bloque h2 {
+  color: #ffcc00;                
+  font-size: 24px;               
+  margin-bottom: 15px;           
+  text-align: center;            
+}
+
+/* Listas dentro del bloque de valores */
+.bloque ul {
+  padding-left: 20px;
+}
+
+.bloque li {
+  margin-bottom: 10px;
+}
+
+/* Animación fade-in desde abajo */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contenedor de servicios */
+.contenedor-servicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+/* Bloques de servicio */
+.bloque {
+  background: rgba(255,255,255,0.1); /* semitransparente para ver el fondo */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  color: #fff;
+  min-width: 280px;
+  max-width: 300px;
+  text-align: center;
+
+  /* Animación */
+  opacity: 0;                /* empieza invisible */
+  animation: fadeInUp 0.8s forwards; /* dura 0.8s, mantiene el estado final */
+  transition: all 0.3s ease; /* para hover */
+}
+
+/* Animación escalonada */
+.contenedor-servicios .bloque:nth-child(1) { animation-delay: 0.1s; }
+.contenedor-servicios .bloque:nth-child(2) { animation-delay: 0.3s; }
+.contenedor-servicios .bloque:nth-child(3) { animation-delay: 0.5s; }
+.contenedor-servicios .bloque:nth-child(4) { animation-delay: 0.7s; }
+.contenedor-servicios .bloque:nth-child(5) { animation-delay: 0.9s; }
+
+/* Hover para los bloques */
+.bloque:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Títulos dentro de cada bloque */
+.bloque h2 {
+  color: #ffcc00;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Listas dentro de los bloques */
+.bloque ul {
+  padding-left: 20px;
+}
+
+.bloque li {
+  margin-bottom: 10px;
+}
+.servicios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  position: relative; /* necesario para el overlay */
+
+  /* Imagen de fondo */
+  background-image: url('imagenes/taller.png'); /* ruta de tu imagen */
+  background-size: cover;       /* ocupa todo el contenedor */
+  background-position: center;  /* centrada */
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  padding: 40px; 
+
+  /* Opcional: overlay para contraste */
+}
+.servicios-grid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* opacidad para oscurecer */
+  backdrop-filter: blur(2px);     /* efecto borroso */
+  border-radius: 12px;
+  z-index: 1; 
+}
+
+/* Bloques encima del overlay */
+.servicios-grid .bloque {
+  position: relative;
+  z-index: 2;
+  
+ }
+
+ 

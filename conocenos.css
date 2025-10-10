@@ -1,3 +1,13 @@
+/* Fila de videos en Conócenos */
+
+
+.videos-fila video {
+  width: 300px;
+  height: 180px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  background: #222;
+}
 /* --- CARRUSEL DE IMÁGENES --- */
 input[name="carrusel"] {
   display: none;
@@ -56,14 +66,14 @@ input[name="carrusel"] {
 /* Carrusel de videos */
 .videos {
     padding: 2rem; /* Espacio interno alrededor de la sección */
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: #4b0303; /* Fondo blanco */
     text-align: center; /* Centra el contenido dentro de esta sección */
 }
 
 .video-carrusel {
     display: flex; /* Organiza los videos en fila usando flexbox */
-    justify-content: center; /* Centra los videos horizontalmente */
-    gap: 15rem; /* Espacio muy grande entre los videos */
+    justify-content: left; /* Centra los videos horizontalmente */
+    gap: 2rem; /* Espacio muy grande entre los videos */
     flex-wrap: wrap; /* Permite que los videos salten a la siguiente línea en pantallas pequeñas */
     margin-top: 1rem; /* Margen arriba para separar del contenido anterior */
 }
@@ -74,3 +84,4 @@ input[name="carrusel"] {
     border-radius: 10px; /* Bordes redondeados en los videos */
     box-shadow: 0 5px 12px rgba(238, 8, 8, 0.795); /* Sombra roja intensa para destacar */
 }
+
