@@ -1,49 +1,87 @@
-/* --- Menú hamburguesa para móviles --- */
-.menu-hamburguesa {
-  display: none;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  z-index: 2000;
-}
-.menu-hamburguesa span {
-  display: block;
-  height: 5px;
-  width: 100%;
-  background: #ffcc00;
-  margin: 7px 0;
-  border-radius: 3px;
-  transition: 0.3s;
+/* --- NAVBAR RESPONSIVA SIN JS --- */
+
+.navbar {
+  position: relative;
+  background: linear-gradient(90deg, #0b1a2b, #b91c1c);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+/* Ocultar el checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Botón hamburguesa */
+.menu-btn {
+  font-size: 28px;
+  color: #ffcc00;
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: none; /* oculto por defecto en escritorio */
+}
+
+/* Menú normal (visible en escritorio) */
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* visible en escritorio */
+  gap: 1rem;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.menu li a:hover {
+  background: rgba(255,255,255,0.2);
+  color: #ffcc00;
+}
+
+/* --- AJUSTES PARA MÓVILES --- */
 @media (max-width: 900px) {
-  header {
-    height: auto;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.5rem 1rem;
-  }
-  .menu-header {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: rgba(39,80,124,0.95);
-    position: absolute;
-    top: 60px;
-    left: 0;
-    z-index: 1500;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-  }
-  .menu-header.show {
-    display: flex;
-  }
-  .menu-hamburguesa {
+  /* Mostrar botón ☰ en móviles */
+  .menu-btn {
     display: block;
   }
+
+  /* Ocultar menú por defecto en móviles */
+  .menu {
+    display: none; /* oculto por defecto */
+    flex-direction: column;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    border-radius: 8px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  /* Mostrar menú cuando el checkbox está activo */
+  .menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+
+  /* Enlaces del menú móvil */
+  .menu li {
+    padding: 10px 0;
+  }
+}
+
+
+
+
+
   main, section {
     padding-top: 80px;
   }
@@ -57,7 +95,7 @@
   .imagen-con-texto img {
     height: 300px;
   }
-}
+
 .bloque:hover {
   background: rgba(255, 255, 255, 0.2);
 }

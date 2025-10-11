@@ -17,16 +17,23 @@
         El Araguaney <span class="resaltado">M&amp;D</span> 2024 C.A.
       </a>
     </div>
-    <nav>
-      <ul class="menu-header">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html" class="activo">Nosotros</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="conocenos.html">Conocenos</a></li>
-      </ul>
-    </nav>
+    <div class="navbar">
+  <!-- Checkbox invisible que controla el menú -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+  <!-- Botón hamburguesa -->
+  <label for="menu-toggle" class="menu-btn">☰</label>
+
+  <!-- Menú -->
+  <ul id="menu" class="menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="productos.html">Productos</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="conocenos.html">Conócenos</a></li>
+  </ul>
+</div>
   </header>
 
   <!-- Contenido principal -->
@@ -42,6 +49,7 @@
 
   <!-- Sección del carrusel de imágenes -->
   <section class="carrusel">
+    <h2 class="carrusel-titulo">Sé parte de nuestra comunidad</h2>
     <div class="carrusel-container">
       <div class="slides">
         <div class="slide"><img src="imagenes/rusell1.jpeg" alt="Imagen 1"></div>
@@ -59,7 +67,7 @@
 
     <!-- Carrusel de videos -->
 <section class="videos">
-  <h2>Videos de Motos</h2>
+  <h2 class="videos-titulo">Explora nuestras aventuras sobre ruedas</h2>
   <div class="video-carrusel">
     <video controls>
       <source src="videos/video1.mp4" type="video/mp4">

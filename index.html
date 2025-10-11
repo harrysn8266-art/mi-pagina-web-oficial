@@ -19,30 +19,30 @@
         El Araguaney <span class="resaltado">M&amp;D</span> 2024 C.A.
       </a>
     </div>
-    <div class="menu-hamburguesa" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav>
-      <ul class="menu-header">
-        <li><a href="index.html" class="active">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="conocenos.html">Conócenos</a></li>
-      </ul>
-    </nav>
+    <div class="navbar">
+  <!-- Checkbox invisible que controla el menú -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+  <!-- Botón hamburguesa -->
+  <label for="menu-toggle" class="menu-btn">☰</label>
+
+  <!-- Menú -->
+  <ul id="menu" class="menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="productos.html">Productos</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="conocenos.html">Conócenos</a></li>
+  </ul>
+</div>
+
+    
+    
   </header>
 </main>
 
-<script>
-function toggleMenu() {
-  var menu = document.querySelector('.menu-header');
-  menu.classList.toggle('show');
-}
-</script>
+
 
   <!-- Contenido principal -->
   <main>
@@ -55,7 +55,7 @@ function toggleMenu() {
   </div>
 </div>
 
-</section>
+
 
 
 <!-- Sección de presentación -->
