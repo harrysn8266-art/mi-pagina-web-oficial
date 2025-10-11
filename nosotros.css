@@ -1,4 +1,6 @@
-
+/* =========================
+   SECCIÓN NOSOTROS
+========================= */
 .nosotros {
   padding: 80px 20px 50px 20px; /* 80px arriba, 50px abajo */
   background: linear-gradient(90deg, #27507c, #472828);
@@ -10,16 +12,27 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
 }
 
-
-/* Estilo del título principal */
+/* Título principal de la sección */
 .nosotros h1 {
   text-align: center;
-  font-size: 36px;
+  font-size: 28px; /* tamaño reducido */
   color: #ffcc00;
   margin-bottom: 15px;
 }
 
-/* Imagen con texto */
+/* Párrafos dentro de la sección nosotros */
+.nosotros p {
+  text-align: center;             
+  max-width: 800px;               
+  margin: 0 auto 40px;            
+  font-size: 16px; /* tamaño reducido */
+  line-height: 1.6;               
+  color: #fff;
+}
+
+/* =========================
+   IMAGEN CON TEXTO
+========================= */
 .imagen-con-texto {
   position: relative;
   width: 100%;
@@ -35,15 +48,14 @@
   height: auto;
   display: block;
   border-radius: 12px;
-  filter: brightness(60%) blur(2px); /* reduce brillo y aplica un leve desenfoque */
+  filter: brightness(60%) blur(2px); 
   transition: all 0.5s ease;
 }
 
 .imagen-con-texto:hover img {
   transform: scale(1.05);
-  filter: brightness(65%) blur(1px); /* un efecto sutil al pasar el mouse */
+  filter: brightness(65%) blur(1px); 
 }
-
 
 .imagen-con-texto p {
   position: absolute;
@@ -51,7 +63,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 60px;           
+  font-size: 36px; /* tamaño reducido */
   font-weight: bold;
   text-align: center;
   z-index: 2;
@@ -61,7 +73,6 @@
   padding: 0;
 }
 
-/* Forzar que el texto quede en 2 líneas */
 .imagen-con-texto p::after {
   content: "";
   display: block;
@@ -69,17 +80,9 @@
   clear: both;
 }
 
-/* Párrafos en la sección nosotros */
-.nosotros p {
-  text-align: center;             
-  max-width: 800px;               
-  margin: 0 auto 40px;            
-  font-size: 18px;                
-  line-height: 1.6;               
-  color: #fff;
-}
-
-/* Contenedor que agrupa los bloques de misión, visión y valores */
+/* =========================
+   BLOQUES DE MISIÓN, VISIÓN Y VALORES
+========================= */
 .contenedor-nosotros {
   display: flex;                  
   flex-wrap: wrap;               
@@ -87,26 +90,23 @@
   gap: 30px;                     
 }
 
-/* Estilo general para cada bloque de contenido */
 .bloque {
-  background: rgba(255,255,255,0.1); /* deja ver el degradado */
+  background: rgba(255,255,255,0.1); 
   border-radius: 10px;            
   box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
   padding: 20px; 
-   max-width: 200px;                 
-    min-width: 280px;                 
+  max-width: 200px;                 
+  min-width: 280px;                 
   color: #fff;                     
 }
 
-/* Títulos dentro de cada bloque */
 .bloque h2 {
   color: #ffcc00;                
-  font-size: 24px;               
+  font-size: 20px; /* tamaño reducido */
   margin-bottom: 15px;           
   text-align: center;            
 }
 
-/* Listas dentro del bloque de valores */
 .bloque ul {
   padding-left: 20px;
 }

@@ -1,183 +1,94 @@
-/* --- NAVBAR RESPONSIVA SIN JS --- */
-
-.navbar {
-  position: relative;
-  background: linear-gradient(90deg, #0b1a2b, #b91c1c);
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+/* =========================
+   GLOBAL
+========================= */
+* {
+  box-sizing: border-box; /* Incluye padding y border en el ancho y alto de los elementos */
 }
 
-/* Ocultar el checkbox */
+html, body {
+  height: 100%; /* Asegura que la página ocupe todo el alto de la ventana */
+  margin: 0;    /* Quita margen por defecto */
+  padding: 0;   /* Quita padding por defecto */
+  font-family: Arial, sans-serif; /* Fuente principal */
+  color: #fff;  /* Color de texto por defecto */
+  background: linear-gradient(90deg, #27507c, #472828); /* Fondo degradado */
+  text-shadow: 2px 2px 8px #472828, 0 0 2px #000; /* Sombra ligera para texto */
+}
+
+/* =========================
+   NAVBAR RESPONSIVA SIN JS
+========================= */
+.navbar {
+  position: relative;             /* Posicionamiento relativo para hijos absolutos */
+  display: flex;                  /* Flex para alinear elementos horizontalmente */
+  justify-content: space-between; /* Espacio entre logo y menú */
+  align-items: center;            /* Centrado vertical */
+  padding: 10px 20px;             /* Espacio interno */
+  background: linear-gradient(90deg, #0b1a2b, #b91c1c); /* Fondo degradado */
+  border-radius: 0 0 10px 10px;   /* Bordes redondeados en la parte inferior */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra para elevar navbar */
+}
+
+/* Ocultar checkbox del menú hamburguesa */
 .menu-toggle {
   display: none;
 }
 
 /* Botón hamburguesa */
 .menu-btn {
-  font-size: 28px;
-  color: #ffcc00;
-  cursor: pointer;
-  background: none;
-  border: none;
-  display: none; /* oculto por defecto en escritorio */
+  font-size: 28px;   /* Tamaño del icono */
+  color: #ffcc00;    /* Color amarillo */
+  cursor: pointer;   /* Cursor de puntero */
+  background: none;  /* Sin fondo */
+  border: none;      /* Sin borde */
+  display: none;     /* Oculto por defecto en escritorio */
 }
 
-/* Menú normal (visible en escritorio) */
+/* Menú principal en escritorio */
 .menu {
-  list-style: none;
+  list-style: none;  /* Quitar viñetas */
   margin: 0;
   padding: 0;
-  display: flex; /* visible en escritorio */
-  gap: 1rem;
+  display: flex;     /* Flex para alinear horizontalmente */
+  gap: 1rem;         /* Espacio entre enlaces */
 }
 
 .menu li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: background 0.3s;
+  color: #fff;           /* Texto blanco */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: bold;     /* Negrita */
+  padding: 8px 12px;     /* Espacio interno */
+  border-radius: 5px;    /* Bordes redondeados */
+  transition: background 0.3s; /* Animación suave al pasar el mouse */
 }
 
 .menu li a:hover {
-  background: rgba(255,255,255,0.2);
-  color: #ffcc00;
+  background: rgba(255,255,255,0.2); /* Fondo semitransparente al hover */
+  color: #ffcc00;                     /* Cambia el texto a amarillo */
 }
 
-/* --- AJUSTES PARA MÓVILES --- */
-@media (max-width: 900px) {
-  /* Mostrar botón ☰ en móviles */
-  .menu-btn {
-    display: block;
-  }
-
-  /* Ocultar menú por defecto en móviles */
-  .menu {
-    display: none; /* oculto por defecto */
-    flex-direction: column;
-    width: 100%;
-    background: rgba(0,0,0,0.8);
-    border-radius: 8px;
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  /* Mostrar menú cuando el checkbox está activo */
-  .menu-toggle:checked ~ .menu {
-    display: flex;
-  }
-
-  /* Enlaces del menú móvil */
-  .menu li {
-    padding: 10px 0;
-  }
-}
-
-
-
-
-
-  main, section {
-    padding-top: 80px;
-  }
-  .bloque, .bloque-contacto {
-    max-width: 98vw;
-    min-width: 0;
-    margin: 10px auto;
-    width: auto;
-    box-sizing: border-box;
-  }
-  .imagen-con-texto img {
-    height: 300px;
-  }
-
-.bloque:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-/* Título de la sección Nosotros con mismo estilo que Catálogo de Motos */
-.nosotros h2 {
-  color: #ffcc00;
-  text-shadow: 2px 2px 8px #472828, 0 0 2px #000;
-}
-
-* {
-  
-  box-sizing: border-box;
-}
-/* Fondo general de todas las páginas */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: linear-gradient(90deg, #27507c, #472828);
-  font-family: Arial, sans-serif;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  text-shadow: 2px 2px 8px #472828, 0 0 2px #000;
-}
-
-.nosotros {
-  padding: 80px 20px 50px 20px;
-  color: #fff;
-  text-align: center;
-  max-width: 1200px;
-  margin: 20px auto;
-  /* No ponemos fondo sólido ni semitransparente aquí */
-  text-shadow: 2px 2px 8px #472828, 0 0 2px #000;
-}
-
-
-
-section, .intro-motos, .videos, .catalogo, .nosotros, .servicios, .contacto, .conocenos {
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto;
-  max-width: 1200px;
-  background: rgba(0,0,0,0.4); /* semitransparente, para que se vea el degradado detrás */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ---------------- HEADER COMPACTO ---------------- */
+/* =========================
+   HEADER COMPACTO
+========================= */
 header {
-  background: linear-gradient(90deg, #0b1a2b, #b91c1c);
-  height: 50px;              /* header más pequeño */
-  color: white;
-  padding: 0 1rem;           /* menos espacio horizontal */
-  position: fixed;
+  position: fixed;      /* Fijo en la parte superior */
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-  display: flex;
+  height: 50px;         /* Altura compacta */
+  display: flex;        /* Flex para alinear contenido */
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  flex-wrap: wrap;      /* Permite que elementos se acomoden si no caben */
+  padding: 0 1rem;
+  background: linear-gradient(90deg, #0b1a2b, #b91c1c);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra ligera */
+  z-index: 1000;        /* Sobre otros elementos */
 }
 
-/* Contenedor logo + título */
+/* Contenedor logo y título */
 .logo-container {
   display: flex;
   align-items: center;
@@ -185,30 +96,31 @@ header {
 }
 
 .logo-icon {
-  height: 40px; /* logo más pequeño */
+  height: 40px;
   width: auto;
 }
 
+/* Título de la página o logo textual */
 .titulo {
-  font-size: 1.2rem; /* título más pequeño */
+  font-size: 1.2rem;
   font-weight: bold;
   color: white;
   text-decoration: none;
   padding: 0.2rem 0.4rem;
   border-radius: 5px;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Transición suave */
 }
 
 .titulo:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: scale(1.05);
+  background-color: rgba(255,255,255,0.1); /* Fondo semitransparente al hover */
+  transform: scale(1.05);                  /* Escala ligera */
 }
 
-/* Menú de navegación */
+/* Menú header */
 .menu-header {
   list-style: none;
   display: flex;
-  gap: 0.5rem; /* espacio más compacto */
+  gap: 0.5rem;
   margin: 0;
   padding: 0;
 }
@@ -217,24 +129,18 @@ header {
   display: inline-block;
   background: transparent;
   color: white;
-  padding: 0.3rem 0.6rem; /* más pequeño */
+  padding: 0.3rem 0.6rem;
   border-radius: 5px;
-  text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
+  text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-}
-
-.menu-header li a {
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
 }
 
+/* Efecto hover con pseudo-elemento */
 .menu-header li a::after {
   content: "";
   position: absolute;
@@ -247,70 +153,163 @@ header {
 }
 
 .menu-header li a:hover::after {
-  left: 0;
+  left: 0; /* Barra animada al pasar el mouse */
 }
 
 .menu-header li a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255,255,255,0.2);
   color: #0b1a2b;
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
+/* Resaltado de texto */
 .resaltado {
-  color: #e60000;
+  color: #e60000; /* Rojo intenso */
 }
 
-/* Compensar el header fijo para que no tape contenido */
+/* =========================
+   MAIN Y SECCIONES
+========================= */
 main, section {
-  padding-top: 70px; /* un poco más alto que el header */
+  padding-top: 70px; /* Compensa header fijo */
 }
 
-
-/* Estilos para navegación dentro de <nav> */
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0;
-  margin: 1rem 0;
+section, .intro-motos, .videos, .catalogo, .nosotros, .servicios, .contacto, .conocenos {
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1200px;
+  background: rgba(0,0,0,0.4); /* Fondo semitransparente */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-nav a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #004080;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-  background-color: #e60000;
-}
-
-/* Estilos para la sección principal */
 main {
-  padding: 2rem;
   max-width: 2000px;
   margin: auto;
-  border-radius: 0;
-  background: none; /* igual que secciones */
-  color: #fff; /* para que el texto contraste */
-  box-shadow: none;
+  background: none;       /* Sin fondo */
+  box-shadow: none;       /* Sin sombra */
 }
 
+/* Sección Nosotros */
+.nosotros {
+  padding: 80px 20px 50px 20px; /* Espacios superior e inferior específicos */
+  text-align: center;
+  max-width: 1200px;
+}
 
+.nosotros h2 {
+  color: #ffcc00; /* Color amarillo para títulos */
+  text-shadow: 2px 2px 8px #472828, 0 0 2px #000; /* Sombra para resaltar */
+}
 
+/* =========================
+   BLOQUES Y CONTENEDORES
+========================= */
+.contenedor-nosotros {
+  display: flex;
+  flex-wrap: wrap;       /* Permite que los bloques bajen de línea */
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
 
+.bloque, .bloque-contacto {
+  max-width: 98vw;  /* Limita ancho en pantallas pequeñas */
+  min-width: 0;
+  margin: 10px auto;
+  width: auto;
+  box-sizing: border-box;
+}
+
+.bloque {
+  background: rgba(230, 226, 226, 0.1); /* Fondo semitransparente */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(51, 28, 28, 0.1); /* Sombra suave */
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 200px;
+  min-width: 280px;
+  color: #fff;
+  text-shadow: 2px 2px 8px #472828, 0 0 2px #000;
+}
+
+.bloque h2 {
+  color: #ffcc00;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+  text-shadow: 2px 2px 8px #472828, 0 0 2px #000;
+}
+
+.bloque ul {
+  padding-left: 20px;
+}
+
+.bloque li {
+  margin-bottom: 10px;
+}
+
+.bloque:hover {
+  background: rgba(255, 255, 255, 0.2); /* Cambio de fondo al hover */
+}
+
+/* =========================
+   IMAGEN CON TEXTO
+========================= */
+.imagen-con-texto {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto 30px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #27507c, #472828);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.imagen-con-texto img {
+  width: 100%;
+  height: 1100px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(60%) blur(2px); /* Imagen oscura y desenfocada de fondo */
+  transition: transform 0.5s ease;   /* Animación al hacer hover */
+}
+
+.imagen-con-texto:hover img {
+  transform: scale(1.05); /* Zoom al pasar mouse */
+}
+
+.imagen-con-texto .texto-encima {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrar texto sobre la imagen */
+  text-align: center;
+  color: #fff;
+  z-index: 2; /* Por encima de la imagen */
+}
+
+.imagen-con-texto .texto-principal {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.imagen-con-texto .texto-secundario {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
 .footer {
   background: linear-gradient(90deg, #27507c, #472828);
   color: #f1f1f1;
   padding: 30px 20px;
-  font-family: Arial, sans-serif;
   text-shadow: 2px 2px 8px #472828, 0 0 2px #000;
 }
 
@@ -349,13 +348,11 @@ main {
   color: #fff;
 }
 
-/* Logo */
 .footer .logo {
   width: 80px;
   margin-bottom: 10px;
 }
 
-/* Desarrolladores */
 .devs-list {
   list-style: none;
   padding: 0;
@@ -380,133 +377,67 @@ main {
   margin-right: 10px;
   font-size: 18px;
   color: #ddd;
+  display: inline-block;
   transition: color 0.3s;
+  animation: float 3s ease-in-out infinite; /* Efecto flotante */
 }
 
 .social a:hover {
   color: #fff;
 }
 
-
-
-
-
-.imagen-con-texto {
-  position: relative;
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto 30px; /* mismo margen que nosotros */
-  border-radius: 12px;
-  overflow: hidden;
-  background: linear-gradient(90deg, #27507c, #472828); /* gradiente igual que nosotros */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+/* =========================
+   ANIMACIONES
+========================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Inicia debajo y transparente */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Aparece en posición normal */
+  }
 }
 
-
-.imagen-con-texto img {
-  width: 100%;
-  height: 1100px; /* aquí decides lo grande que se verá */
-  object-fit: cover; /* rellena sin deformarse */
-  display: block;
-  filter: brightness(60%) blur(2px);
-  transition: transform 0.5s ease;
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); } /* Movimiento vertical suave */
 }
 
+/* =========================
+   MEDIA QUERIES
+========================= */
+@media (max-width: 900px) {
+  .menu-btn {
+    display: block; /* Muestra botón hamburguesa en tablet y móvil */
+  }
 
-.imagen-con-texto:hover img {
-  transform: scale(1.05);
+  .menu {
+    display: none;             /* Menú oculto por defecto */
+    flex-direction: column;    /* Columnas para móvil */
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    border-radius: 8px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .menu-toggle:checked ~ .menu {
+    display: flex; /* Muestra menú al activar checkbox */
+  }
+
+  .menu li {
+    padding: 10px 0;
+  }
 }
 
-/* Contenedor del texto encima de la imagen */
-.imagen-con-texto .texto-encima {
-  position: absolute;
-  top: 50%;   /* centrado vertical */
-  left: 50%;  /* centrado horizontal */
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  z-index: 2;
-}
-
-.imagen-con-texto .texto-principal {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-.imagen-con-texto .texto-secundario {
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
   .imagen-con-texto .texto-principal {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Reduce texto principal en móvil */
   }
   .imagen-con-texto .texto-secundario {
-    font-size: 1rem;
+    font-size: 1rem; /* Reduce texto secundario en móvil */
   }
 }
 
-
-
-.social a {
-  display: inline-block;
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-.social a {
-  display: inline-block;
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
-/* Contenedor que agrupa los bloques */
-.contenedor-nosotros {
-  display: flex;                  
-  flex-wrap: wrap;                
-  justify-content: center;        
-  gap: 30px;                      
-  margin: 40px auto;
-  max-width: 1200px;             /* limita el ancho total */
-}
-
-/* Estilo general para cada bloque */
-.bloque {
-  background: rgba(230, 226, 226, 0.1); /* deja ver el degradado */ 
-  border-radius: 10px;            
-  box-shadow: 0 2px 10px rgba(51, 28, 28, 0.1); 
-  padding: 20px;                  
-  flex: 1 1 300px;                /* flexible: crece según contenido */
-  max-width: 200px;               /* no demasiado grande */
-  min-width: 280px;               /* no demasiado pequeño */
-  color: #fff;
-  text-shadow: 2px 2px 8px #472828, 0 0 2px #000;
-}
-
-/* Títulos dentro de cada bloque */
-.bloque h2 {
-  color: #ffcc00;
-  font-size: 24px;
-  margin-bottom: 15px;
-  text-align: center;
-  text-shadow: 2px 2px 8px #472828, 0 0 2px #000;
-}
-
-/* Listas dentro de los bloques */
-.bloque ul {
-  padding-left: 20px;
-}
-
-.bloque li {
-  margin-bottom: 10px;
-}

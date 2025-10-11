@@ -1,9 +1,14 @@
-/* Títulos principales de servicios con color y sombreado igual a catálogo de motos */
-h2 , h1 {
+/* =========================
+   TÍTULOS GENERALES
+========================= */
+h1, h2 {
   color: #ffcc00;
   text-shadow: 2px 2px 8px #472828, 0 0 2px #000;
 }
 
+/* =========================
+   SECCIÓN SERVICIOS
+========================= */
 .servicios {
   padding: 80px 20px 50px 20px; /* 80px arriba, 50px abajo */
   background: linear-gradient(90deg, #27507c, #472828);
@@ -15,8 +20,7 @@ h2 , h1 {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
 }
 
-
-/* Estilo del título principal */
+/* Título principal de la sección */
 .servicios h1 {
   text-align: center;
   font-size: 36px;
@@ -24,8 +28,7 @@ h2 , h1 {
   margin-bottom: 15px;
 }
 
-
-/* Párrafos en la sección nosotros */
+/* Párrafos en la sección servicios */
 .servicios p {
   text-align: center;             
   max-width: 800px;               
@@ -35,34 +38,60 @@ h2 , h1 {
   color: #ffcc00;
 }
 
-/* Contenedor que agrupa los bloques de misión, visión y valores */
+/* =========================
+   CONTENEDORES DE BLOQUES
+========================= */
 .contenedor-servicios {
   display: flex;                  
   flex-wrap: wrap;               
   justify-content: center;        
   gap: 30px;                     
+  margin: 40px auto;
+  max-width: 1200px;
 }
 
-/* Estilo general para cada bloque de contenido */
+/* =========================
+   BLOQUES DE SERVICIOS
+========================= */
 .bloque {
-  background: rgba(255,255,255,0.1); /* deja ver el degradado */
+  background: rgba(255,255,255,0.1); /* semitransparente para ver el fondo */
   border-radius: 10px;            
   box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
   padding: 20px; 
-   max-width: 200px;                 
-    min-width: 280px;                 
+  min-width: 280px;
+  max-width: 300px;
   color: #fff;                     
+  text-align: center;
+
+  /* Animación */
+  opacity: 0;                
+  animation: fadeInUp 0.8s forwards; 
+  transition: all 0.3s ease;
 }
 
-/* Títulos dentro de cada bloque */
+/* Animación escalonada */
+.contenedor-servicios .bloque:nth-child(1) { animation-delay: 0.1s; }
+.contenedor-servicios .bloque:nth-child(2) { animation-delay: 0.3s; }
+.contenedor-servicios .bloque:nth-child(3) { animation-delay: 0.5s; }
+.contenedor-servicios .bloque:nth-child(4) { animation-delay: 0.7s; }
+.contenedor-servicios .bloque:nth-child(5) { animation-delay: 0.9s; }
+
+/* Hover de los bloques */
+.bloque:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Títulos dentro de los bloques */
 .bloque h2 {
-  color: #ffcc00;                
-  font-size: 24px;               
-  margin-bottom: 15px;           
-  text-align: center;            
+  color: #ffcc00;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-/* Listas dentro del bloque de valores */
+/* Listas dentro de los bloques */
 .bloque ul {
   padding-left: 20px;
 }
@@ -71,7 +100,9 @@ h2 , h1 {
   margin-bottom: 10px;
 }
 
-/* Animación fade-in desde abajo */
+/* =========================
+   ANIMACIONES
+========================= */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -83,79 +114,24 @@ h2 , h1 {
   }
 }
 
-/* Contenedor de servicios */
-.contenedor-servicios {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin: 40px auto;
-  max-width: 1200px;
-}
-
-/* Bloques de servicio */
-.bloque {
-  background: rgba(255,255,255,0.1); /* semitransparente para ver el fondo */
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  padding: 20px;
-  color: #fff;
-  min-width: 280px;
-  max-width: 300px;
-  text-align: center;
-
-  /* Animación */
-  opacity: 0;                /* empieza invisible */
-  animation: fadeInUp 0.8s forwards; /* dura 0.8s, mantiene el estado final */
-  transition: all 0.3s ease; /* para hover */
-}
-
-/* Animación escalonada */
-.contenedor-servicios .bloque:nth-child(1) { animation-delay: 0.1s; }
-.contenedor-servicios .bloque:nth-child(2) { animation-delay: 0.3s; }
-.contenedor-servicios .bloque:nth-child(3) { animation-delay: 0.5s; }
-.contenedor-servicios .bloque:nth-child(4) { animation-delay: 0.7s; }
-.contenedor-servicios .bloque:nth-child(5) { animation-delay: 0.9s; }
-
-/* Hover para los bloques */
-.bloque:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-}
-
-/* Títulos dentro de cada bloque */
-.bloque h2 {
-  color: #ffcc00;
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-/* Listas dentro de los bloques */
-.bloque ul {
-  padding-left: 20px;
-}
-
-.bloque li {
-  margin-bottom: 10px;
-}
+/* =========================
+   GRID CON IMAGEN DE FONDO
+========================= */
 .servicios-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  position: relative; /* necesario para el overlay */
-
-  /* Imagen de fondo */
-  background-image: url('imagenes/taller.png'); /* ruta de tu imagen */
-  background-size: cover;       /* ocupa todo el contenedor */
-  background-position: center;  /* centrada */
+  position: relative; /* necesario para overlay */
+  background-image: url('imagenes/taller.png');
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   border-radius: 12px;
-  padding: 40px; 
-
-  /* Opcional: overlay para contraste */
+  padding: 40px;
 }
+
+/* Overlay oscuro para contraste */
 .servicios-grid::before {
   content: "";
   position: absolute;
@@ -163,17 +139,14 @@ h2 , h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8); /* opacidad para oscurecer */
-  backdrop-filter: blur(2px);     /* efecto borroso */
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(2px);
   border-radius: 12px;
-  z-index: 1; 
+  z-index: 1;
 }
 
 /* Bloques encima del overlay */
 .servicios-grid .bloque {
   position: relative;
   z-index: 2;
-  
- }
-
- 
+}
