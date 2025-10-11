@@ -115,3 +115,44 @@
   margin-bottom: 10px;
 }
 
+/* =========================
+   AJUSTES SOLO PARA MÓVILES
+========================= */
+@media (max-width: 768px) {
+  /* Párrafos de la sección nosotros */
+  .nosotros p {
+    font-size: 14px;      /* Reducimos tamaño para móviles */
+    max-width: 90%;       /* Ajuste ancho */
+    margin-bottom: 30px;  /* Ajuste margen inferior */
+  }
+
+  /* Título principal de nosotros */
+  .nosotros h1 {
+    font-size: 22px;      /* Reducimos tamaño */
+    margin-bottom: 10px;  /* Ajuste margen inferior */
+  }
+
+  /* Texto sobre imagen */
+  .imagen-con-texto p {
+    font-size: 24px;      /* Reducimos tamaño del texto */
+    line-height: 1.3;     /* Mejor legibilidad */
+    width: 95%;           /* Ajuste ancho para móviles */
+  }
+
+  /* Bloques misión, visión y valores */
+  .bloque {
+    min-width: 200px;     /* Ajuste tamaño mínimo */
+    max-width: 90%;       /* Que no se pase del contenedor */
+    padding: 15px;        /* Ajuste padding */
+  }
+
+  .bloque h2 {
+    font-size: 18px;      /* Reducimos tamaño subtítulo */
+    margin-bottom: 10px;  /* Ajuste margen */
+  }
+
+  .bloque li {
+    font-size: 14px;      /* Reducimos tamaño de lista */
+  }
+}
+
