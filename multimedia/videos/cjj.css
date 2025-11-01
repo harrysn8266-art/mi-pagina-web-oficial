@@ -1,0 +1,240 @@
+/* Estilos generales para todo el cuerpo de la página */
+body {
+  font-family: Arial, sans-serif; /* Fuente legible y común */
+  background-color: #f2f2f2;      /* Color de fondo gris claro */
+  margin: 0;                      /* Sin margen externo */
+  padding: 0;                     /* Sin padding inicial */
+  padding-top: 80px;              /* Espacio arriba para que el contenido no quede debajo del header fijo */
+}
+
+/* Estilos para el encabezado fijo */
+header {
+  background: linear-gradient(90deg, #0b1a2b, #b91c1c);
+  color: white;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 2rem;       /* Espacio entre logo/título y menú */
+  flex-wrap: wrap;  /* Para que sea responsive */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Contenedor logo + título */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espacio entre logo y título */
+}
+
+/* Menú de navegación alineado a la izquierda del header, justo al lado del título */
+.menu-header {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;       /* Espacio entre botones */
+  margin: 0;
+  padding: 0;
+}
+
+.imagen-con-texto {
+  position: relative;
+  width: 800px;           /* Ajusta según el tamaño deseado */
+  margin: 30px auto;      /* Centra el contenedor */
+}
+
+.imagen-con-texto img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  filter: brightness(50%); /* Sombreado para resaltar el texto */
+}
+
+.imagen-con-texto p {
+  position: absolute;
+  top: 50%;                  /* Centrado vertical */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 60px;           /* Texto grande */
+  font-weight: bold;
+  text-align: center;
+  z-index: 2;
+  width: 90%;                /* Ocupa casi todo el ancho de la imagen */
+  line-height: 1.2;          /* Altura de línea */
+  white-space: normal;       /* Permite saltos de línea */
+  padding: 0;
+}
+
+/* Forzar que el texto quede en 2 líneas */
+.imagen-con-texto p::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+
+/* Estilo para el icono del logo */
+.logo-icon {
+  height: 50px;                /* Altura fija */
+  width: auto;                 /* Ancho proporcional */
+}
+
+/* Estilo para el título dentro del header */
+.titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;                  /* Texto blanco */
+  text-decoration: none;         /* Quitar subrayado */
+  padding: 0.3rem 0.6rem;        /* Espacio alrededor del texto */
+  border-radius: 5px;            /* Bordes redondeados */
+  transition: all 0.3s ease;     /* Animación suave */
+}
+
+.titulo:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente al pasar el cursor */
+  transform: scale(1.05);                     /* Pequeño efecto de agrandado */
+}
+
+
+/* Menú de navegación estilo horizontal */
+/* Botones del menú */
+.menu-header li a {
+  display: inline-block;
+  background: transparent;       /* Sin fondo */
+  color: white;                  /* Texto blanco */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;    /* Para suavizar la interacción */
+  cursor: pointer;
+}
+
+/* Efecto hover: cambio de fondo, color y sombra */
+.menu-header li a:hover {
+  background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+  color: #0b1a2b;                        /* Texto amarillo dorado al pasar */
+  transform: scale(1.05);                /* Pequeño efecto de “agrandar” */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra ligera */
+}
+   /* Fondo azul claro al pasar mouse */
+
+
+/* Clase para resaltar texto con color rojo fuerte */
+.resaltado {
+  color: #e60000;
+}
+
+/* Estilos para navegación dentro de <nav> */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;     /* Centrado horizontal */
+  gap: 1rem;                   /* Espacio entre botones */
+  padding: 0;
+  margin: 1rem 0;
+}
+
+/* Estilos para enlaces dentro de <nav> */
+nav a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #004080;   /* Fondo azul */
+  color: white;                /* Texto blanco */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;          /* Bordes redondeados */
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para enlaces de navegación */
+nav a:hover {
+  background-color: #e60000;   /* Fondo rojo al pasar mouse */
+}
+
+/* Estilos para la sección principal */
+main {
+  padding: 2rem;
+  max-width: 800px;            /* Ancho máximo para mejor lectura */
+  margin: auto;                /* Centrado horizontal */
+  background: white;           /* Fondo blanco */
+  border-radius: 5px;          /* Bordes redondeados */
+}
+
+/* Estilos para el pie de página */
+footer {
+  text-align: center;
+  background: linear-gradient(90deg, #0b1a2b, #b91c1c); /* Mismo degradado que header */
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+
+
+/* --- CARRUSEL DE IMÁGENES --- */
+
+/* Oculta los inputs usados para el control del carrusel */
+input[name="carrusel"] {
+  display: none;
+}
+
+/* Contenedor general del carrusel */
+.carrusel {
+  max-width: 800px;            /* Ancho máximo */
+  margin: 3rem auto;           /* Centrado vertical y horizontal */
+  position: relative;          /* Para posicionar elementos internos */
+  overflow: hidden;            /* Oculta el contenido que desborde */
+  border-radius: 10px;
+  background-color: #ffffff;   /* Fondo blanco */
+}
+
+/* Contenedor interno para las imágenes */
+.carrusel-container,
+.slides,
+.slide,
+.slide img {
+  margin: 0;
+  padding: 0;
+  display: block; /* Evita espacios extra alrededor de las imágenes */
+}
+
+
+/* Contenedor de las diapositivas */
+.slides {
+  display: flex;               /* Las diapositivas en fila */
+  width: 100%;
+  animation: autoSlide 28s infinite; /* Animación automática */
+  transition: transform 0.5s ease-in-out; /* Suavizado al cambiar */
+}
+
+/* Cada diapositiva ocupa todo el ancho del carrusel */
+.slide {
+  width: 100%;
+  flex-shrink: 0;              /* No se encoge */
+}
+
+/* Imágenes que ocupan todo el ancho del slide */
+.slide img {
+  width: 100%;
+  display: block;              /* Quita espacios en línea */
+}
+
+/* Animación para mover las imagenes automáticamente */
+@keyframes autoSlide {
+  0%    { transform: translateX(0%); }
+  14.28% { transform: translateX(-100%); }
+  28.56% { transform: translateX(-200%); }
+  42.84% { transform: translateX(-300%); }
+  57.12% { transform: translateX(-400%); }
+  71.4% { transform: translateX(-500%); }
+  85.68% { transform: translateX(-600%); }
+  100%  { transform: translateX(0%); }
+}
+
